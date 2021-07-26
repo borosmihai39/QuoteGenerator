@@ -25,7 +25,10 @@ function newQuote() {
 
     quoteText.textContent = quote.text;
     document.querySelector('meta[property="og:title"]').setAttribute("content", quote.text);
-    console.log(document.querySelector('meta[property="og:title"]').content);
+
+    //console.log(document.querySelector('meta[property="og:title"]').content);
+    document.title = quote.text;
+    //console.log(document.title);
 }
 
 
@@ -47,6 +50,9 @@ async function getQuotes() {
         // Catch error here
     }
 }
+
+// Event Listeners
+newQuoteBtn.addEventListener('click', newQuote);
 
 // On Load run our function
 getQuotes();
