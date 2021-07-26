@@ -6,12 +6,26 @@ const quoteText = document.getElementById('quote');
 const authorText = document.getElementById('author');
 const facebookBtn = document.getElementById('facebook');
 const newQuoteBtn = document.getElementById('new-quote');
+const loader = document.getElementById('loader');
+
+// loading function - show loading
+function loading() {
+    loader.hidden = false;
+    quoteContainer.hidden = true;
+}
+
+// Hide loading
+function complete() {
+    quoteContainer.hidden = false;
+    loader.hidden = true;
+}
 
 // empty array
 let apiQuotes = [];
 
 // show new Quote
 function newQuote() {
+    loading();
     // Pick a random quote from apiQuotes array\
     const quote = apiQuotes[Math.floor(Math.random() * apiQuotes.length)];
     authorText.textContent = quote.author;
@@ -22,8 +36,9 @@ function newQuote() {
     } else {
         quoteText.classList.remove('long-quote');
     }
-
+    // set quote, hide loader
     quoteText.textContent = quote.text;
+    complete();
     document.querySelector('meta[property="og:title"]').setAttribute("content", quote.text);
 
     //console.log(document.querySelector('meta[property="og:title"]').content);
@@ -36,7 +51,7 @@ function newQuote() {
 
 
 async function getQuotes() {
-
+    loading();
     const apiUrl = 'https://type.fit/api/quotes';
     // try catch allows us to attempt to complete a fetch request, but if it doesnt work we can catch the error info
     try {
@@ -56,3 +71,4 @@ newQuoteBtn.addEventListener('click', newQuote);
 
 // On Load run our function
 getQuotes();
+

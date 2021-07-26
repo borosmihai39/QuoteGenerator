@@ -13,7 +13,7 @@
 
     <title>Quote Generator</title>
 
-    <link rel="icon" type="image/png" href="https://www.google.com/s2/favicons?domain=jacinto.design">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 
@@ -23,7 +23,7 @@
 
 <body>
     <div id="fb-root"></div>
-    <script>(function (d, s, id) {
+    <script>(async function (d, s, id) {
             var js, fjs = d.getElementsByTagName(s)[0];
             if (d.getElementById(id)) return;
             js = d.createElement(s); js.id = id;
@@ -52,7 +52,8 @@
         <!-- ctrl + question mark pentru asta -->
         <!-- Script -->
     </div>
-
+    <!-- Loader -->
+    <div class="loader" id="loader"></div>
     <script src="script.js"></script>
 </body>
 
