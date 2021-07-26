@@ -6,6 +6,7 @@ const quoteText = document.getElementById('quote');
 const authorText = document.getElementById('author');
 const facebookBtn = document.getElementById('facebook');
 const newQuoteBtn = document.getElementById('new-quote');
+document.querySelector('meta[name="description"]').setAttribute("content", quoteText);
 // empty array
 let apiQuotes = [];
 
