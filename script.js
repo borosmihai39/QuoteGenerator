@@ -26,6 +26,9 @@ function newQuote() {
     quoteText.textContent = quote.text;
 }
 
+async function setTags() {
+    document.querySelector('meta[name="og:title"]').setAttribute("content", "My new page description!!");
+}
 //Check quote length to determine the styling
 
 
