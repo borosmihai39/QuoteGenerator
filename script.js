@@ -30,7 +30,7 @@ function newQuote() {
 
 
 async function getQuotes() {
-    document.querySelector('meta[name="og:description"]').setAttribute("content", quoteText);
+    //document.querySelector('meta[name="og:description"]').setAttribute("content", quoteText);
     const apiUrl = 'https://type.fit/api/quotes';
     // try catch allows us to attempt to complete a fetch request, but if it doesnt work we can catch the error info
     try {
