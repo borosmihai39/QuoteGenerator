@@ -6,7 +6,7 @@ const quoteText = document.getElementById('quote');
 const authorText = document.getElementById('author');
 const facebookBtn = document.getElementById('facebook');
 const newQuoteBtn = document.getElementById('new-quote');
-document.querySelector('meta[name="description"]').setAttribute("content", quoteText);
+
 // empty array
 let apiQuotes = [];
 
@@ -30,6 +30,7 @@ function newQuote() {
 
 
 async function getQuotes() {
+    document.querySelector('meta[name="og:description"]').setAttribute("content", quoteText);
     const apiUrl = 'https://type.fit/api/quotes';
     // try catch allows us to attempt to complete a fetch request, but if it doesnt work we can catch the error info
     try {
