@@ -6,14 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta property="og:type" content="article" />
-    <!-- in title vreau quote-ul -->
-    <meta property="og:title" content="" />
-    <!-- in description autorul -->
-    <meta property="og:description" content="test123" />
+    <meta property="og:url" content="https://borosmihai39.github.io/template-test/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Quote Generator" />
+    <meta property="og:description" content="Here is a quote that I liked" />
+    <!-- <meta property="og:image" content="https://www.your-domain.com/path/image.jpg" /> -->
 
     <title>Quote Generator</title>
 
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 
@@ -23,14 +27,9 @@
 
 <body>
     <div id="fb-root"></div>
-    <script>(async function (d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) return;
-            js = d.createElement(s); js.id = id;
-            js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
-            fjs.parentNode.insertBefore(js, fjs);
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v11.0"
+        nonce="Cnhpmgdn"></script>
 
-        }(document, 'script', 'facebook-jssdk'));</script>
     <!-- div.classname#id in emmet -->
     <div class="quote-container" id="quote-container">
         <!-- Quote Element -->
@@ -45,8 +44,8 @@
         <!-- Buttons -->
         <div class="button-container">
 
-            <div class="fb-share-button" data-href="" data-layout="button_count">
-            </div>
+            <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-width=""
+                data-layout="standard" data-action="like" data-size="large" data-share="true"></div>
             <button id="new-quote">New Quote</button>
         </div>
         <!-- ctrl + question mark pentru asta -->
