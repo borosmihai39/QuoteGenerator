@@ -48,12 +48,14 @@ body {
     font-size: 2rem;
     font-weight: 400;
     font-style: italic;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .button-container {
     margin-top: 15px;
     display: flex;
-    justify-content: space-between;
+    justify-content:center;
 }
 
 button {
@@ -68,6 +70,7 @@ button {
     outline: none;
     padding: 0.5rem 1.8rem;
     box-shadow: 0 0.3rem rgba(121,121,121,0.65);
+    font-weight: 500;
 }
 
 
